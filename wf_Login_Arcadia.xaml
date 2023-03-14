@@ -111,8 +111,8 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="449.6,1000.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Default="tammy.peters@petersmfg.com" Name="var_strEmail" />
-              <Variable x:TypeArguments="x:String" Default="arcadiabank!" Name="var_strPassword" />
+              <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Variavel para guardar o e-mail" Default="tammy.peters@petersmfg.com" Name="var_strEmail" />
+              <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Varaivel para guardar a senha" Default="arcadiabank!" Name="var_strPassword" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">

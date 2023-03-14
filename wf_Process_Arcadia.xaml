@@ -1,12 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="wf_Process_Arcadia" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="arg_inStrPaymountAmount" Type="InArgument(x:String)" />
-    <x:Property Name="arg_inIntContador" Type="InArgument(x:Int32)" />
+    <x:Property sap2010:Annotation.AnnotationText="Argumento de entrada do paymount amount" Name="arg_inStrPaymountAmount" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Argumento de entrada do contador" Name="arg_inIntContador" Type="InArgument(x:Int32)" />
   </x:Members>
   <this:wf_Process_Arcadia.arg_inStrPaymountAmount>
     <InArgument x:TypeArguments="x:String" />
   </this:wf_Process_Arcadia.arg_inStrPaymountAmount>
-  <sap:VirtualizedContainerService.HintSize>1410.4,1532.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,1534.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -106,20 +106,20 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Efetua o processo de inserção de dados no site arcadia" sap:VirtualizedContainerService.HintSize="568.8,1468" sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence sap2010:Annotation.AnnotationText="Efetua o processo de inserção de dados no site arcadia" sap:VirtualizedContainerService.HintSize="568.8,1469.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Efetua o processo no site do arcadia" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Arcadia Financial - Acct 2839" sap:VirtualizedContainerService.HintSize="506.4,1324.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f0385473-4b6d-404f-8548-5fbe0f1d4c21" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Efetua o processo no site do arcadia" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Arcadia Financial - Acct 2839" sap:VirtualizedContainerService.HintSize="506.4,1326.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f0385473-4b6d-404f-8548-5fbe0f1d4c21" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="472.8,1076.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="472.8,1078.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="var_boolAmount" />
             </Sequence.Variables>
@@ -164,12 +164,8 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="wf_Change_Status.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="wf_Change_Status.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="arg_inStrStatus">
-                        <Literal x:TypeArguments="x:String">Unverified</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:Int32" x:Key="arg_inIntContador">
-                        <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="arg_inIntContador" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="arg_inStrStatus">Unverified</InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="arg_inIntContador">[arg_inIntContador]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
@@ -183,12 +179,8 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="wf_Change_Status.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="wf_Change_Status.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="arg_inStrStatus">
-                        <Literal x:TypeArguments="x:String">Verified</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:Int32" x:Key="arg_inIntContador">
-                        <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="arg_inIntContador" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="arg_inStrStatus">Verified</InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="arg_inIntContador">[arg_inIntContador]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>

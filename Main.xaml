@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,602.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,2936.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
@@ -99,37 +99,34 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="449.6,394.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
-    </Sequence.Variables>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="688,2872" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="wf_Login_Arcadia.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="wf_Login_Arcadia.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="wf_Login_Arcadia.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="wf_Login_Arcadia.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abre o navegador microsoft edge no automation anywhere labs&#xD;&#xA;&#xD;&#xA;OBS:Ia ser um wf mas deu memoria insuficiente" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser |  Automation Anywhere Labs" sap:VirtualizedContainerService.HintSize="387.2,128.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="457fd0eb-4e0b-4ccc-9425-6b8bb49b5f34" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abre o navegador microsoft edge no automation anywhere labs&#xA;&#xA;OBS:Ia ser um wf mas deu memoria insuficiente" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser |  Automation Anywhere Labs" sap:VirtualizedContainerService.HintSize="625.6,2606.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="457fd0eb-4e0b-4ccc-9425-6b8bb49b5f34" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="496,1114.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="592,2329.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
-              <Variable x:TypeArguments="sd:DataTable" Name="var_dtTransactions" />
-              <Variable x:TypeArguments="x:Int32" Name="var_intContador" />
+              <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="Dt com as transações" Name="var_dtTransactions" />
+              <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Contador para o loop" Name="var_intContador" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NExtractData sap2010:Annotation.AnnotationText="Extrai o numero de transactions" AppendResults="False" ContinueOnError="True" DataTable="[var_dtTransactions]" DisplayName="Extract Table Data | Numeros de Transactions" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Transactions' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='form' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="433.6,188.8" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="457fd0eb-4e0b-4ccc-9425-6b8bb49b5f34" Version="V3">
+            <uix:NExtractData sap2010:Annotation.AnnotationText="Extrai o numero de transactions" AppendResults="False" ContinueOnError="True" DataTable="[var_dtTransactions]" DisplayName="Extract Table Data | Numeros de Transactions" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Transactions' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='form' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="529.6,188.8" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="457fd0eb-4e0b-4ccc-9425-6b8bb49b5f34" Version="V3">
               <uix:NExtractData.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="317, 538, 1283, 4267" DesignTimeScaleFactor="1.1299999952316284" FriendlyName="'Transaction 1 PO Number'" FullSelectorArgument="&lt;webctrl class='container' tag='DIV' /&gt;" Guid="d92ca4c7-8583-4ddf-85dd-de3694a49cb7" InformativeScreenshot="306527d1b264e66e451981112458d4a8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NExtractData.Target>
@@ -139,8 +136,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NExtractData>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[var_dtTransactions.RowCount.ToString + &quot; Transações&quot;]" />
-            <Assign sap2010:Annotation.AnnotationText="Criando um contador" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[var_dtTransactions.RowCount.ToString + &quot; Transações&quot;]" />
+            <Assign sap2010:Annotation.AnnotationText="Criando um contador" sap:VirtualizedContainerService.HintSize="529.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[var_intContador]</OutArgument>
               </Assign.To>
@@ -153,7 +150,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Efetua o processo no site do arcadia&#xD;&#xA;OBS: Ia ser um wf mas não deu por memoria insuficiente" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Arcadia Financial - Account Overview" sap:VirtualizedContainerService.HintSize="433.6,96.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f0385473-4b6d-404f-8548-5fbe0f1d4c21" Version="V2">
+            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Efetua o processo no site do arcadia&#xA;OBS: Ia ser um wf mas não deu por memoria insuficiente" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Arcadia Financial - Account Overview" sap:VirtualizedContainerService.HintSize="529.6,96.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f0385473-4b6d-404f-8548-5fbe0f1d4c21" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -200,7 +197,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NApplicationCard>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[var_dtTransactions]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[var_dtTransactions]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="529.6,1268" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
@@ -208,8 +205,8 @@
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="496,1150.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="var_strPaymentAccount" />
-                      <Variable x:TypeArguments="x:String" Name="var_strPaymentAmount" />
+                      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Guarda a payment account em string" Name="var_strPaymentAccount" />
+                      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Guarda a payment amount em string" Name="var_strPaymentAmount" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -220,7 +217,7 @@
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-quarterclose.html?_ga=2.49218595.460877479.1678191340-510187198.1672842637&amp;_gl=1*ppvlo7*_ga*NTEwMTg3MTk4LjE2NzI4NDI2Mzc.*_ga_DG1BTLENXK*MTY3ODE5OTAwOC4yNC4xLjE2NzgxOTkwMjYuNDIuMC4w&amp;_fsi=KeFJdekT" DesignTimeRectangle="596, 750, 234, 43" DesignTimeScaleFactor="1.1299999952316284" ElementType="InputBox" FriendlyName="'Checking (..2839)'" FullSelectorArgument="&lt;webctrl id='PaymentAccount1' tag='INPUT' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='PaymentAccount{0}' tag='INPUT' type='text' class='form-control' aaname='' /&gt;&quot;, var_intContador)]" Guid="6d5373a0-3087-47dc-b7ab-1a15e2043afd" ImageBase64="" InformativeScreenshot="9411d836091951f6ac868364c6f1f0da.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target DesignTimeRectangle="596, 714, 140, 27" ElementType="Text" FriendlyName="'Payment Account'" FullSelectorArgument="&lt;webctrl aaname='Payment Account' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Payment Account' tag='LABEL' type='' class='' check:innerText='Payment Account' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAfCAYAAAAIoES1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVHSURBVHhe7VnBiitFFPWf3nfkP2aVH3D3dm81brIcELKQ2UhQJCJEEaNg8xCDiI1oi0hQJChGFPNQynOq72mqK9WT7o4OM3l14MxMV9+uunX71K1bPa+4jIwzkAWUcRaygDLOQiOgJ69lZvankAWUOYpCFlDmKApZQJmjKGQBZY6ikAWUOYpCW0Bf2kUKfzu3/8W5+Vvtji6Sr2OePzi3+SJxL0XYl//UYSo/T9y/BEYxEdIC+tO5atfmFm0efzl3g85anV8aP8RiwVQrxCN5P+IEoiEOWGTuV+euEjaPnlFMhKSA9lBa62HjzY/1/W2Zvn8xHCigJUTjXji33vrwuPV7abtHzf9CQE8+qjsJ70+fo1NlJwKpfP9bsNV9gpWJ5lSfEuQCGe0a94nl+0F/6GuL9ilsZ9+hD9smmCFp1+rvDbQhUx5kg2xQ4Rk+K5vkGEDLX4tBiEXQxxHfhI80+hl/21wPaEjaYow1yoC7fOxjM1mettFcY9/j9rExEQYJSKl6/71df1oHjNta8TWc+Ap7JAb2+MO5p/Zcgfu0ubZrcYNVy8BP8Lcmwm2AtdYKfZXog9j9jh9o32CMFewoYq74mfrCS6xwn4KrcJ9+FOiDOOC3ApsaQ3bN1oPsscTL4Lx2EDj70jxSfApbovysvvZzhR+38TaPl+F9BHY/1f1qfornUBsurtAmNde+AhoaE6G3gKYfw2FzvEA6Y9stMwjaFniBoa1P6YCcVJD1nKeJT0WnJsKxKShvo9WNF7LUagCVuYoP6uuZbR0rrEzZkFMIjtggM/A6OQa4sIA1wR6whXnBQMw3dq0x4mJaPm4w77B9xQWHPvh8H5tbLDiiwG4Q2swhOCKea18BDY2JkC6i78Du2/ZAKcqplYQFBWN3aQlzzkAEK1XPxIGp2AhBhmNObAVIkMpwXD1cHQ1t1WjcrjGadgm8r4BSW5bNNS6mC24P8DHOwiH72PjTHgR1VKjbuAcsLl5rTn0FNDQmQlpAmEh8CuMWNQuyQMird7A6cLzj9lJxuzGEGWfNNBsExweCdYNdHzls9ALCagjb5Kdsvc1dgP+06xrjVLC6qGygVS/6uQJhMZ2cR8S+NhJJ6p6e15x6C2hgTIRhRXTECVSrbY04IJWz+CqtDgqdehWZi/BBRb1AqG4guyaSDGpKQCcCT44NVpLInPr204UwM/UVx0slIL/SEMQVhBRuMU2NEjpl9cwO24rfvoK6geyaSDKokYB8MR71l+LYYKV4VdbPsHBtbZtGJL3WFt21PT1Dccw6cvl2P5tTW1i8Xa/fbdstvGMPRED+5Ub1CY/TJV8oEDvli2uIrsL9+KjbNZE+AlLxucWLC+2muPbt9t1qbLBS9IUt0PXNR9ubxk4WyBBXeELtY3OqiC6f19fK+K1iHiXI1rLmw8lAtIequer8EZsOmpOxU1q1RFw3nCOg8GgrXwr8ZoHLeu46LtSjMY7asWr9QsX8Vujr6Bhvqz0ulFu0Arv5nJE4flcUBlDpXyYjbVLH+MZH2JbI+jxQ7PD3nlkOGCygKCbCWQLiZApbiR5wsPoG6rfvRUdfrHUsRwZqvuEYzxIQCV9aH9fwm2J6howom97BAm9tRRP6XCAqU5z6v9dRMR37CHEUljEa9rBJfkhE3MMPiSQ/8m5NgIyH/yhrsRssIDCMidAW0P9NZAIKordAMx8shXsVkD7sXeT/il4yCvcioBnSa8WUy4Hwu7NuyHw0FO5FQHM71rMAm2OPT9lkPi4K91sDZV4MhSygzFEUsoAyR1HIAsocRaERUEbGcDj3L6VQk06ten6GAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -235,11 +232,11 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Capturando Payment Account: &quot; + var_strPaymentAccount]" />
-                    <uix:NGetText sap2010:Annotation.AnnotationText="Captura o texto do campo Payment Amount&#xD;&#xA;" DisplayName="Get Text | Payment Amount" sap:VirtualizedContainerService.HintSize="433.6,201.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="457fd0eb-4e0b-4ccc-9425-6b8bb49b5f34" TextString="[var_strPaymentAmount]" Version="V3">
+                    <uix:NGetText sap2010:Annotation.AnnotationText="Captura o texto do campo Payment Amount&#xA;" DisplayName="Get Text | Payment Amount" sap:VirtualizedContainerService.HintSize="433.6,201.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="457fd0eb-4e0b-4ccc-9425-6b8bb49b5f34" TextString="[var_strPaymentAmount]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-quarterclose.html?_ga=2.49218595.460877479.1678191340-510187198.1672842637&amp;_gl=1*ppvlo7*_ga*NTEwMTg3MTk4LjE2NzI4NDI2Mzc.*_ga_DG1BTLENXK*MTY3ODE5OTAwOC4yNC4xLjE2NzgxOTkwMjYuNDIuMC4w&amp;_fsi=KeFJdekT" DesignTimeRectangle="1126, 750, 196, 43" DesignTimeScaleFactor="1.1299999952316284" ElementType="InputBox" FriendlyName="'608.67'" FullSelectorArgument="&lt;webctrl id='PaymentAmount1' tag='INPUT' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='PaymentAmount{0}' tag='INPUT' type='text' class='form-control' aaname='' /&gt;&quot;, var_intContador)]" Guid="41692270-39d5-4fde-be9b-bcc378388ea1" ImageBase64="" InformativeScreenshot="b49c6953afbeb5265770cc3206f73b5e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target DesignTimeRectangle="1085, 747, 43, 47" ElementType="Text" FriendlyName="'$'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='input-group-text' aaname='$' check:innerText='$' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAvCAYAAAB6zDPWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHxSURBVGhD7ZnBS8JwFMf797yIoKAQBoJKIEOIDl4UwkMXA91hQRjRUeugUBdPgkgiFVRSZqRkCIlCoCdP3/Yc0rQfNGs/tsHvwQecvsc+e76fG/424KAQsrzih+zgY4SH9ituWx3LoPOThz5ms9my7HO3j073XU0cYzj+tAw6P3mQDwWJTiaTb1m6EkpgFVuF1rgRptPpsqzWems7ugr5kBeJLsnSrLAKrIa8hCwPhCwvhCwvhCwv+Mq2S5B2SmixPvsDfGTbNeQSMXh9frg8friDcSSOa+gMGblrYL4sdVOVdIfTUE5kbEUzyB3swq1KB7IN9Fg1BjFdtn4Ygisoo9JXj3VjUFci8IZlXNL7KzVGMV22mlW/eqmozandZ3beWc8mpKMGWndFmy+wbgVJv7aw5vhiSCglVB9H7Pw1MF+W6D2hrKQQ0EtTtwsv7HyD8JFdQDMrKTgryNiei8dx2mLkGYS/7GJmr/Lwqh2Wzt/YuQYwWfYGSjQCd6amHetl6TXJ/mMUTJYdoJykRZXRfk91sp1SWr0xhJBrrtYYx2RZlWYeAVpQoZT972BE7/oC+yvPBnuFe/Rs92ygRz+zJiBkeSFkeSFkeSFkeSFkecGUddTf9I7aAKFwzNbSIuhKqPU0K1ahjeQvm3Z2DwfJAl9hc3FrL++MLQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -256,12 +253,8 @@
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,108.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Capturando Payment Amount: &quot; + var_strPaymentAmount]" />
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="wf_Process_Arcadia.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="wf_Process_Arcadia.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="arg_inStrPaymountAmount">
-                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="var_strPaymentAmount" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="arg_inIntContador">
-                          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="var_intContador" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="arg_inStrPaymountAmount">[var_strPaymentAmount]</InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="arg_inIntContador">[var_intContador]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <Assign sap2010:Annotation.AnnotationText="Soma o contador + 1 " sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -282,12 +275,12 @@
               </ui:ForEachRow.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Enviando...&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Enviando...&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -295,7 +288,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <uix:NClick ClickType="Single" DisplayName="Click | Submit" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="457fd0eb-4e0b-4ccc-9425-6b8bb49b5f34" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click | Submit" sap:VirtualizedContainerService.HintSize="529.6,52.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="457fd0eb-4e0b-4ccc-9425-6b8bb49b5f34" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-quarterclose.html?_ga=2.49218595.460877479.1678191340-510187198.1672842637&amp;_gl=1*ppvlo7*_ga*NTEwMTg3MTk4LjE2NzI4NDI2Mzc.*_ga_DG1BTLENXK*MTY3ODE5OTAwOC4yNC4xLjE2NzgxOTkwMjYuNDIuMC4w&amp;_fsi=KeFJdekT" DesignTimeRectangle="317, 876, 158, 41" DesignTimeScaleFactor="1.1299999952316284" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl id='submitbutton' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submitbutton' tag='BUTTON' type='button' class='btn btn-info' aaname='Submit' check:innerText='Submit' /&gt;" Guid="543eb23d-b55d-4fa3-b8bf-4cca8edbec1a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKIAAAAtCAYAAAAtFLAWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIoSURBVHhe7d07bsJAEIDh3Ci3yOEiUUW5BgdIQZugFJE4AAKloqCAAiFRbDDxY7w7G4OD7fHqX+lrYHnJv8amgYfv1ZcDhkaIMIEQYUItxJe3T/f0+uEen9+BzmSNZa3J9soQszu0BwFdkTGWITIJ0besuSBEbSPQNUKECYQIEwgRJhAiTCBEmECIMIEQYQIhwgRChAlph7g4uHAd3FTbe6XJ+nSX57nKbOf2+astF/K+lZsfnduvV+K2cUs2xOk2P4LqOrn5TH9ck+FD3LhlfhshWicOYHQdd26iPbZBryGqCHE8xCm5fkqTk7KaitG4lOep762iuKztpnpsw94iompPtrxJ7U9E9VIj/IxjlHyI10y+diFGlni9pr37o3a/eA+EOHa/F/Ph0q8NW4cYiU6ddsW09C4bwucV75FrxBR4p01vySnSLkQ/ahF/Hp2+V+yT01qLjhBT0jwd24Xo7T0rrz/zwPS9YbAXhJh6iB4RV3gKJcShJBiinIBhLPLghqfQW0K85dRMiE0SDFEG8PcqD64yJf1rzDDE84p8WQn3EmKTJEOsT8XIinxRiC01RG2pcd4zxPCzVfeNV6Ih5sSkk0s9cH6MWVCN14j1qVkLK9hb3P7fEM+8z5XCZEw7RIwGIcIEQoQJhAgTCBEmECJMIESYQIgwgRBhAiHCBEKECYQIE4IQ+Q1t9E39DW3+VQB9U/9VoIiRyYiuZY3JCDO1EIFhfLkf4bjjZqjYzFgAAAAASUVORK5CYII=" InformativeScreenshot="5a640f55e3252238a6465bbcee0ab6f3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -306,7 +299,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Enviado com sucesso!!!&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Enviado com sucesso!!!&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -323,7 +316,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
